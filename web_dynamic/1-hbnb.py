@@ -21,7 +21,7 @@ def close_session(exec):
     storage.close()
 
 
-@app.route('/0-hbnb')
+@app.route('/1-hbnb')
 def hbnb():
     """
     display hbnb
@@ -29,7 +29,7 @@ def hbnb():
     states = storage.all(State).values()
     amenities = storage.all(Amenity).values()
     places = storage.all(Place).values()
-    return render_template('0-hbnb.html',
+    return render_template('1-hbnb.html',
                            states=states,
                            amenities=amenities,
                            places=places,
